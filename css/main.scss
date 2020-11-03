@@ -11,20 +11,244 @@ body, html{
     width: 100%;
     height: 100%;
     font-family: 'Source Serif Pro', serif;
+    display: flex;
+    flex-direction: column;
+
+    h1{font-size: 44px;}
+    h2{font-size: 35px;}
+    h3{}
+    h4{}
+    h5{}
+    h6{}
 }
 
     $colWhite : #fff;
     $colBlack : #000;
     $colSpecial : #f1cdb3;
 
-    header{
-
+    .wrap{
+        margin: 0 auto;
+        max-width: 1170px;
+        height: 100%;
     }
 
-    #maket{
+    .wrap2{
+        margin: 0 auto;
+        max-width: 830px;
+        height: 100%;
+    }
 
+    header{
+        flex-grow: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $colWhite;
+        width: 100%;
+        margin-top: 60px;
+        z-index: 5;
+
+        .header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        
+            .logo{
+                font-size: 32px;
+                color: $colSpecial;
+                cursor: pointer;
+            }
+
+            .logo_text{
+                font-size: 13px;
+            }
+
+            .menu{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 15px;
+
+                    li{
+                        margin: 0 19px;
+                        border-bottom: 3px solid transparent;
+                        cursor: pointer;
+                    }
+
+                    li:last-child{
+                        margin-right: 0;
+                    }
+
+                    li:hover,
+                    li:focus,
+                    li:active{
+
+                            border-bottom:3px solid $colSpecial;
+                            display: inline-block;
+                            // background-color: $colSpecial;
+                            // min-width: 57px;
+                            // height: 3px;
+                            transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }      
+
+    main{
+        width: 100%;
+        flex-grow: 1;
+
+        .section_first{
+            background-image: url("../img/first_section.png");
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            color: $colWhite;
+            
+            .first_content{
+                display: flex;
+                justify-content: space-between;
+
+                .first_text{
+                    width: 100%;
+                    padding-top: 360px;
+
+                    h1{
+                        letter-spacing: 4px;
+                    }
+                    
+                    p{
+                        width: 443px;
+                        font-size: 15px;
+                        margin-top: 40px;
+                    }
+
+                    button{
+                        width: 205px;
+                        height: 52px;
+                        background-color: $colSpecial;
+                        font-size: 17px;
+                        border-radius: 25px;
+                        margin-top: 40px;
+                    }
+                }    
+
+                .first_picture{
+                    box-sizing: border-box;
+                    position: relative;
+                    bottom: 0;
+                    width: 650px;
+                    height: 720px;
+                    margin-top: 200px;
+
+                    img{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        min-width: 100%; 
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .section_two{
+            width: 100%;
+            background-color: $colWhite;            
+            
+            .two_content{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                
+                .two_picture{
+                    box-sizing: border-box;
+                    position: relative;
+                    left: 0;
+                    bottom: 0;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: 85px;
+                    margin-bottom: 100px;
+
+                    img{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        min-width: 300px; 
+                        height: 100%;
+                    }
+                }
+
+                .two_text{
+                    width: 400px;
+                    padding-top: 120px;
+
+                    h2{
+                        letter-spacing: 4px;
+                    }
+                    
+                    p{
+                        width: 400px;
+                        font-size: 15px;
+                        margin-top: 30px;
+                        margin-bottom: 20px;
+                    }
+                }    
+            }
+        }
     }
 
     footer{
+        background-image: url("../img/footer.png");
+        background-size: cover;
+        width: 100%;
+        flex-grow: 0;
 
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            div{
+
+                h2{
+                    color: $colWhite;
+                    margin-top: 80px;
+                }
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    color: $colSpecial;
+                    font-size: 20px;
+                    margin-top: 35px;
+
+                    img{
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .footer_picture{
+                box-sizing: border-box;
+                position: relative;
+                width: 300px;
+                height: 317px;
+                margin-top: 51px;
+
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    min-width: 100%; 
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
